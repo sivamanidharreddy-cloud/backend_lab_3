@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bdf-lab-03
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+    healthCheckPath: /books
+
